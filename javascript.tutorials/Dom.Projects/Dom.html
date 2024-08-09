@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My number !</title>
+    <link rel="stylesheet" href="Dom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Freehand&family=Merriweather&family=Reggae+One&family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <button class="btn-again">Again!</button>
+      <h1 class="gnum">Guess The Number !</h1>
+      <p class="between">(between 1 and 20)</p>
+    </header>
+    <div class="number-con">
+      <div class="number">?</div>
+    </div>
+    <main>
+      <section class="left">
+        <input type="number" max="20" min="0" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+
+      <section class="right">
+        <p class="message">Start Guessing...</p>
+        <p class="label-score">Score : <span class="score">20</span></p>
+        <p class="label-highscore">
+          Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+
+    <script src="Dom.js"></script>
+  </body>
+</html>

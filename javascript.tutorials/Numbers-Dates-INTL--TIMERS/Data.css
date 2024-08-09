@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: rgb(238, 242, 246);
+}
+.nav {
+  width: 100%;
+  height: 14vh;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.7rem 0 2.7rem;
+  gap: 1rem;
+  /* border: 2px solid rebeccapurple; */
+}
+.nav h1 {
+  color: rgba(100, 146, 147, 0.509);
+}
+.logo {
+  height: 3.8rem;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+.input {
+  height: 2.5rem;
+  width: 7.5rem;
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+  background-color: white;
+  color: rgba(117, 109, 109, 0.976);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+.input::placeholder {
+  color: rgba(190, 182, 182, 0.976);
+}
+.input:focus,
+input:hover {
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 3rem;
+  width: 44px;
+  border: none;
+  background-color: #fff;
+  border-radius: 33px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+}
+.welcome {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/*  ---------------  : BANKLIST APP  :  ------------------ */
+.app {
+  height: 81vh;
+  width: 75%;
+  margin: auto;
+  padding-top: 2rem;
+  opacity: 0;
+}
+.movements--operations {
+  display: flex;
+  gap: 1.2rem;
+}
+/*    ----------------  :     BALANCE        : -------------------------------- */
+.balance {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 1.5rem 0;
+  /* border: 2px solid green; */
+  margin-bottom: 0.5rem;
+}
+.balance_label {
+  color: rgba(0, 0, 0, 0.708);
+  font-size: 1.2rem;
+  letter-spacing: 0.1px;
+  /* padding-bottom: 2px; */
+}
+.balance_date {
+  color: rgba(0, 0, 0, 0.471);
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+.balance_value {
+  font-size: 3.4rem;
+}
+
+/*  ------------------     Movements  ------------------------- */
+.movements-sheet {
+  /* border: 2px solid greenyellow; */
+  width: 60%;
+}
+.movements {
+  overflow: scroll;
+  height: 70vh;
+  /* border: 2px solid red; */
+  /* padding: 0.7rem; */
+}
+.movements__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 33px 18px 33px;
+  margin-bottom: 3px;
+  /* border: 1px solid blueviolet; */
+  background-color: rgba(244, 224, 224, 0.839);
+  border-radius: 10px 10px 0 0;
+}
+.movements-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.movements__type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+.movements__type--deposit {
+  background: linear-gradient(#42b32be3, #2f7e1f);
+}
+.movements__type--withdrawal {
+  background: linear-gradient(#f23a3aef, #861212);
+}
+.movements__date {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a3838b8;
+}
+.movements__value {
+  font-size: 1.1rem;
+  /* font-weight: 600; */
+  color: #3a3838d4;
+}
+/*   --------------------  :  summary    : ----------------- */
+.summary {
+  display: flex;
+  /* border: 2px solid black; */
+  justify-content: space-between;
+  padding: 12px 20px 12px 20px;
+  align-items: center;
+}
+.summary div {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.summary__label {
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #3a3838e4;
+  text-transform: uppercase;
+}
+.summary__value--in {
+  color: rgba(23, 201, 23, 0.938);
+  /* font-weight: bold; */
+  font-size: 1.8rem;
+}
+.summary__value--out {
+  color: rgb(228, 39, 39);
+  /* font-weight: bold; */
+  font-size: 1.8rem;
+}
+.summary__value--intrest {
+  color: rgba(18, 140, 18, 0.957);
+  /* font-weight: bold; */
+  font-size: 1.8rem;
+}
+.btn--sort {
+  border: none;
+  font-weight: bold;
+  color: #3a3838e3;
+  cursor: pointer;
+  background-color: rgba(127, 255, 212, 0.218);
+  height: 1.8rem;
+  width: 4rem;
+  transition: all 0.3s ease;
+}
+.btn--sort:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------    :   OPERATION     :  --------------------------------- */
+.operation-container {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.operation {
+  /* border: 2px solid firebrick; */
+  box-shadow: 0 0 10px rgba(31, 30, 30, 0.924);
+  border-radius: 7px;
+  height: 20vh;
+  width: 30vw;
+  padding: 10px 22px 10px 20px;
+}
+.operation--transfer {
+  background: linear-gradient(
+    170deg,
+    rgb(255, 213, 0) 20%,
+    rgb(255, 153, 0) 90%
+  );
+}
+.operation--loan {
+  background: linear-gradient(
+    170deg,
+    rgb(89, 191, 55) 20%,
+    rgb(26, 111, 29) 100%
+  );
+}
+.operation--close {
+  background: linear-gradient(
+    170deg,
+    rgba(255, 5, 5, 0.872) 10%,
+    rgb(199, 0, 0) 100%
+  );
+}
+.operation h2 {
+  font-size: 1rem;
+  padding-bottom: 0.7rem;
+}
+.operation .form {
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 0.5rem;
+}
+.operation .form__input {
+  width: 11rem;
+  font-size: 0.9rem;
+  border-radius: 9px;
+  height: 2.4rem;
+  padding: 3px 6px 3px 8px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+.operation .form__input::placeholder {
+  color: rgba(52, 50, 50, 0.739);
+}
+.operation .form__input:focus,
+.form__input:hover {
+  border: 1px solid #ccc;
+}
+.operation .form__input:hover {
+  border: 1px solid #ccc;
+}
+.operation .form__btn {
+  cursor: pointer;
+  border-radius: 9px;
+  height: 2.4rem;
+  font-size: 1rem;
+  width: 2.5rem;
+  padding: 3px 6px 3px 8px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+.operation .form__btn:hover {
+  background-color: #ffffffd7;
+}
+
+.operation .form__input--amount {
+  width: 8rem;
+}
+.operation .form__input--pin {
+  width: 8rem;
+}
+.logout-timer {
+  text-align: end;
+  font-size: 0.8rem;
+  padding-top: 0.7rem;
+}
+.timer {
+  font-weight: bold;
+  font-size: 1rem;
+}

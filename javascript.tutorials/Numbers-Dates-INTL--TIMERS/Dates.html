@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dates.Timers App</title>
+    <link rel="stylesheet" href="Data.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav class="nav">
+      <h1 class="welcome">Login to get started !</h1>
+      <!-- <h1>Good Morning ,<span class="name">Muhammad Hassan</span>!</h1> -->
+
+      <!-- <img class="logo" src="https://bankist.netlify.app/logo.png" alt="" /> -->
+
+      <form class="Login">
+        <input
+          type="text"
+          name=""
+          id="input_user"
+          placeholder="Username"
+          class="input_user input"
+        />
+        <input
+          type="number"
+          name=""
+          id="input_pin"
+          placeholder="Enter PIN"
+          class="input_pin input"
+        />
+        <button class="login__btn btn">
+          <i class="fa-solid fa-right-to-bracket" style="color: #24385b"></i>
+        </button>
+      </form>
+    </nav>
+
+    <!--   BALANCE APP   -->
+    <main class="app">
+      <!-- Balance -->
+      <div class="balance">
+        <div>
+          <h2 class="balance_label">Current balance</h2>
+          <p class="balance_date">As of <span class="date">08/08/2003</span></p>
+        </div>
+
+        <p class="balance_value">0000 €</p>
+      </div>
+
+      <div class="movements--operations">
+        <!-------   MOVEMENTS   ------->
+        <div class="movements-sheet">
+          <section class="movements">
+            <div class="movements__row">
+              <div class="movements-div">
+                <p class="movements__type movements__type--deposit">
+                  2 deposit
+                </p>
+                <p class="movements__date">3 days ago</p>
+              </div>
+              <p class="movements__value">4000 €</p>
+            </div>
+
+            <div class="movements__row">
+              <div class="movements-div">
+                <p class="movements__type movements__type--withdrawal">
+                  1 withdrawal
+                </p>
+                <p class="movements__date">24/01/2037</p>
+              </div>
+              <p class="movements__value">-378 €</p>
+            </div>
+          </section>
+
+          <!-----  SUMMARY  -------->
+          <section class="summary">
+            <div>
+              <p class="summary__label">In</p>
+              <p class="summary__value summary__value--in">0000 €</p>
+            </div>
+
+            <div>
+              <p class="summary__label">Out</p>
+              <p class="summary__value summary__value--out">0000 €</p>
+            </div>
+
+            <div>
+              <p class="summary__label">Intrest</p>
+              <p class="summary__value summary__value--intrest">0000 €</p>
+            </div>
+            <button class="btn--sort">&downarrow; SORT</button>
+          </section>
+        </div>
+
+        <!------ OPERATION TRANSFERS   -------->
+        <section class="operation-container">
+          <div class="operation operation--transfer">
+            <h2>Transfer money</h2>
+            <form class="form form--transfer">
+              <input
+                type="text"
+                class="form__input form__input--to"
+                placeholder="Transfer to"
+              />
+              <input
+                type="number"
+                class="form__input form__input--amount"
+                placeholder="Amount"
+                min="500"
+                max="100000"
+              />
+              <button class="form__btn form__btn--transfer">
+                <i
+                  class="fa-solid fa-money-bill-transfer"
+                  style="color: #252b35"
+                ></i>
+              </button>
+            </form>
+          </div>
+
+          <!----------  OPERATION LOAN ---------->
+          <div class="operation operation--loan">
+            <h2>Request loan</h2>
+            <form class="form form--loan">
+              <input
+                type="number"
+                class="form__input form__input--loan-amount"
+                placeholder="Amount"
+                min="500"
+                max="40000"
+              />
+              <button class="form__btn form__btn--loan">
+                <i class="fa-solid fa-landmark" style="color: #20262e"></i>
+              </button>
+            </form>
+          </div>
+
+          <!------------- CLOSE ACCOUNT  ----------->
+          <div class="operation operation--close">
+            <h2>Close account</h2>
+            <form class="form form--close">
+              <input
+                type="text"
+                class="form__input form__input--user"
+                placeholder="Confirm username"
+              />
+              <input
+                type="number"
+                class="form__input form__input--pin"
+                placeholder="Confirm PIN"
+                min="0"
+                max="9"
+              />
+              <button class="form__btn form__btn--close">
+                <i
+                  class="fa-solid fa-right-from-bracket"
+                  style="color: #262d3a"
+                ></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- LOGOUT TIMER -->
+          <p class="logout-timer">
+            You will be logged out in <span class="timer">05:00</span>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script src="Data.js"></script>
+  </body>
+</html>
